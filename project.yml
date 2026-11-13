@@ -1,0 +1,28 @@
+name: AudioRouter
+options:
+  bundleIdPrefix: br.com.daniel
+  deploymentTarget:
+    macOS: "14.2"
+targets:
+  AudioRouter:
+    type: application
+    platform: macOS
+    sources: [AudioRouter]
+    scheme: {}
+    info:
+      path: AudioRouter/Info.plist
+      properties:
+        LSUIElement: false
+        CFBundleDisplayName: AudioRouter
+        CFBundleShortVersionString: "0.1"
+        CFBundleVersion: "1"
+        NSAudioCaptureUsageDescription: "O AudioRouter captura o áudio de cada app para enviá-lo à saída que você escolher."
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: br.com.daniel.AudioRouter
+        MACOSX_DEPLOYMENT_TARGET: "14.2"
+        SWIFT_VERSION: "5.0"
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_IDENTITY: "-"
+        ENABLE_HARDENED_RUNTIME: NO
+        ENABLE_APP_SANDBOX: NO
